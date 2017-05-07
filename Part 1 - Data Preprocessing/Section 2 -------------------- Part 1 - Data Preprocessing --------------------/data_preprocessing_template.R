@@ -1,4 +1,6 @@
 dataset = read.csv('Data.csv')
+#gettign the subsets
+# dataset = dataset[,2:3]
 
 #splitting data into training and test sets
 # install.packages('caTools')
@@ -9,6 +11,6 @@ training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
 #feature scaling
-training_set[,2:3] = scale(training_set[,2:3])
-test_set[,2:3] = scale(test_set[,2:3])
+# training_set[,2:3] = scale(training_set[,2:3])
+# test_set[,2:3] = scale(test_set[,2:3])
                   
