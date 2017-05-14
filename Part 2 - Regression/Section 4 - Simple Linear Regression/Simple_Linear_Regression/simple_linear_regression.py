@@ -8,7 +8,7 @@ Created on Sun May  7 15:41:13 2017
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
 
 #importing data
 dataset = pd.read_csv('Salary_Data.csv')
@@ -26,3 +26,21 @@ regressor = LinearRegression()
 regressor.fit(x_train, y_train)
 
 
+# Predict the values
+y_pred = regressor.predict(x_test)
+
+#plot graph for training set
+plt.scatter(x_train, y_train, color = 'red')
+plt.plot(x_train, regressor.predict(x_train), color = 'green')
+plt.title('Salary vs Experience')
+plt.xlabel('Years pf experience')
+plt.ylabel('Salary')
+plt.show()
+
+#plot graph for the test set
+plt.scatter(x_test, y_test, color = 'red')
+plt.plot(x_train, regressor.predict(x_train), color = 'green')
+plt.title('Salary vs Experience')
+plt.xlabel('Years pf experience')
+plt.ylabel('Salary')
+plt.show()
